@@ -49,8 +49,11 @@ const AuthProvider = ({ children }) => {
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
-        setLoading(false);
+        //console.log("from on auth change", currentUser);
+      } else {
+        setUser(null);
       }
+      setLoading(false);
     });
   }, []);
 
@@ -61,6 +64,7 @@ const AuthProvider = ({ children }) => {
     googleSigIn,
     GitHubSigIn,
     logOut,
+    loading,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import NavBar from "../shared/NavBar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 import { GoogleAuthProvider } from "firebase/auth/cordova";
@@ -8,6 +8,7 @@ import { GithubAuthProvider } from "firebase/auth";
 
 const Login = () => {
   const { signIn, googleSigIn, GitHubSigIn } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const loginSucessToast = () => {
     Swal.fire({
@@ -23,8 +24,11 @@ const Login = () => {
         const credential = GithubAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
         const user = result.user;
-        console.log(user);
+        //console.log(user);
         loginSucessToast();
+        if (user) {
+          navigate("/");
+        }
       })
       .catch((error) => {
         console.error(error, error.message);
@@ -44,6 +48,9 @@ const Login = () => {
         const user = result.user;
         // console.log(user);
         loginSucessToast();
+        if (user) {
+          navigate("/");
+        }
       })
       .catch((error) => {
         console.error(error, error.message);
@@ -65,9 +72,10 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        //console.log(user);
         if (user) {
           loginSucessToast();
+          navigate("/");
         }
       })
       .catch((error) => {

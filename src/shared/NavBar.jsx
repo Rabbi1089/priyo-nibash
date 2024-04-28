@@ -5,11 +5,12 @@ import Swal from "sweetalert2";
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
+  console.log(user);
+
   const navigate = useNavigate();
   const handleSignOut = () => {
     logOut().then().catch();
   };
-
   const link = (
     <>
       <li>
@@ -60,9 +61,22 @@ const NavBar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <button onClick={handleSignOut} className="btn">
-            Sign Out
-          </button>
+          <>
+            <div className="tooltip" data-tip={user.displayName}>
+              <button className="">
+                {" "}
+                <div className="avatar">
+                  <div className="w-12 rounded-full mx-5 border border-2 border-sky-400">
+                    <img src={user.photoURL} />
+                  </div>
+                </div>
+              </button>
+            </div>
+
+            <button onClick={handleSignOut} className="btn">
+              Sign Out
+            </button>
+          </>
         ) : (
           <Link to="/login">
             <button className="btn">Login</button>

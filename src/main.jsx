@@ -8,6 +8,8 @@ import Root from "./layout/root/Root.jsx";
 import Registration from "./registration/Registration.jsx";
 import AuthProvider from "./provider/AuthProvider.jsx";
 import Login from "./login/Login.jsx";
+import UpdateProfile from "./Pages/UpdateProfile/UpdateProfile.jsx";
+import UserProfile from "./Pages/userProfile/UserProfile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,12 +22,20 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/blog",
-        element: <Registration />,
+        path: "/updateProfile",
+        element: <UpdateProfile />,
+      },
+      {
+        path: "/userProfile",
+        element: <UserProfile />,
       },
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/signUp",
+        element: <Registration />,
       },
     ],
   },

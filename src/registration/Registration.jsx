@@ -60,10 +60,6 @@ const Registration = () => {
   };
   return (
     <div className="">
-      <div className="mb-6">
-        <NavBar></NavBar>
-      </div>
-
       <div className="hero max-w-6xl min-h-[550px]">
         <div className="hero-content flex-col">
           <div className="text-center">

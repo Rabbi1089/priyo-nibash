@@ -1,20 +1,28 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const NavBar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const handleSignOut = () => {
+    logOut().then().catch();
+  };
+
   const link = (
     <>
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/Project">Project</NavLink>
+        <NavLink to="/updateProfile">Update Profile</NavLink>
+      </li>
+      <li>
+        <NavLink to="/userProfile">User Profile</NavLink>
       </li>
       <li>
         <NavLink to="/login">login</NavLink>
-      </li>
-      <li>
-        <NavLink to="/blog">Blog</NavLink>
       </li>
     </>
   );
@@ -51,7 +59,15 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1">{link}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        {user ? (
+          <button onClick={handleSignOut} className="btn">
+            Sign Out
+          </button>
+        ) : (
+          <Link to="/login">
+            <button className="btn">Login</button>
+          </Link>
+        )}
       </div>
     </div>
   );

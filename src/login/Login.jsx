@@ -81,7 +81,6 @@ const Login = () => {
   };
   return (
     <div>
-      <NavBar></NavBar>
       <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-gray-100 text-gray-900 mx-auto lg:my-5">
         <h2 className="mb-3 text-3xl font-semibold text-center">
           Login to your account
@@ -89,7 +88,7 @@ const Login = () => {
         <p className="text-sm text-center text-gray-400">
           Dont have account?
           <Link
-            to="/blog"
+            to="/signUp"
             rel="noopener noreferrer"
             className="focus:underline hover:underline"
           >

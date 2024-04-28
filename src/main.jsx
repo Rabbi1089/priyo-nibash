@@ -10,6 +10,7 @@ import AuthProvider from "./provider/AuthProvider.jsx";
 import Login from "./login/Login.jsx";
 import UpdateProfile from "./Pages/UpdateProfile/UpdateProfile.jsx";
 import UserProfile from "./Pages/userProfile/UserProfile.jsx";
+import PrivateRoute from "./privateRoute/PrivateRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/userProfile",
-        element: <UserProfile />,
+        element: (
+          <PrivateRoute>
+            <UserProfile />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",

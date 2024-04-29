@@ -8,7 +8,7 @@ const Stats = () => {
           <p className="px-6 py-2 text-2xl font-semibold text-center sm:font-bold sm:text-2xl md:text-3xl lg:max-w-2xl xl:max-w-5xl text-gray-600">
             Priyo-Nibash is a leading real estate developer renowned for its
             aesthetic architecture and dedication to delivering signature and
-            luxury apartments in Bangladesh.
+            luxury apartments for you.
           </p>
         </div>
       </section>

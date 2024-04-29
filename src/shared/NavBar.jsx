@@ -56,7 +56,7 @@ const NavBar = () => {
             {link}
           </ul>
         </div>
-        <h1 className="btn btn-ghost text-sm md:text-3xl uppercase m-0">
+        <h1 className=" text-sm md:text-3xl uppercase m-1 lg:m-3 lg:m-0">
           Priyo-nibash
         </h1>
       </div>

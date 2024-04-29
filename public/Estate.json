@@ -1,6 +1,6 @@
 [
     {
-      "image": "image_url_1",
+      "image": "https://i.ibb.co/mBTwKNH/estate-2.jpg",
       "estate_title": "Luxury Villa with Ocean View",
       "id": "001",
       "segment_name": "Luxury",
@@ -12,7 +12,7 @@
       "facilities": ["living room", "swimming pool", "kitchen"]
     },
     {
-      "image": "image_url_2",
+      "image": "https://i.ibb.co/N1DMxK9/estate-4.jpg",
       "estate_title": "Downtown Penthouse Loft",
       "id": "002",
       "segment_name": "Urban",
@@ -24,7 +24,7 @@
       "facilities": ["living room", "gym", "rooftop terrace"]
     },
     {
-      "image": "image_url_3",
+      "image": "https://i.ibb.co/98pMR3m/estate-3.jpg",
       "estate_title": "Mountain Retreat Cabin",
       "id": "003",
       "segment_name": "Rural",
@@ -36,7 +36,7 @@
       "facilities": ["living room", "fireplace", "deck"]
     },
     {
-      "image": "image_url_4",
+      "image": "https://i.ibb.co/V9gTc3p/estate-1.jpg",
       "estate_title": "Modern City Apartment",
       "id": "004",
       "segment_name": "Urban",
@@ -46,5 +46,29 @@
       "area": "1000 sq ft",
       "location": "Metropolis City, New York",
       "facilities": ["living room", "gym", "24/7 security"]
+    },
+    {
+      "image": "https://i.ibb.co/mBTwKNH/estate-2.jpg",
+      "estate_title": "Luxury Villa with Ocean View",
+      "id": "005",
+      "segment_name": "Luxury",
+      "description": "A stunning villa with panoramic views of the ocean, featuring spacious rooms, modern amenities, and private beach access.",
+      "price": "$2,500,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "Coastal Paradise, California",
+      "facilities": ["living room", "swimming pool", "kitchen"]
+    },
+    {
+      "image": "https://i.ibb.co/98pMR3m/estate-3.jpg",
+      "estate_title": "Mountain Retreat Cabin",
+      "id": "006",
+      "segment_name": "Rural",
+      "description": "Cozy cabin nestled in the mountains, surrounded by nature, featuring rustic charm, fireplace, and hiking trails nearby.",
+      "price": "$300,000",
+      "status": "sale",
+      "area": "1200 sq ft",
+      "location": "Serenity Valley, Colorado",
+      "facilities": ["living room", "fireplace", "deck"]
     }
 ]

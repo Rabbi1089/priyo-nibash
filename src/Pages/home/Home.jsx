@@ -1,10 +1,13 @@
 import React from "react";
 import NavBar from "../../shared/NavBar";
+import Slider from "../../components/Slider";
+import Stats from "../../components/Stats";
 
 const Home = () => {
   return (
-    <div>
-      <h1>This is from home</h1>
+    <div className=" my-5 rounded-lg shadow-md">
+      <Slider />
+      <Stats />
     </div>
   );
 };

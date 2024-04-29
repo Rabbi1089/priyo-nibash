@@ -12,19 +12,19 @@ const Slider = () => {
         </div>
         <div id="item2" className="carousel-item w-full">
           <img
-            src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
+            src="https://i.ibb.co/TRtgxSv/nibash-slider-1.jpg"
             className="w-full"
           />
         </div>
         <div id="item3" className="carousel-item w-full">
           <img
-            src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+            src="https://i.ibb.co/ftPK23M/nibash-slider-2.jpg"
             className="w-full"
           />
         </div>
         <div id="item4" className="carousel-item w-full">
           <img
-            src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
+            src="https://i.ibb.co/fHKpXYT/nibash-slider-3.jpg"
             className="w-full"
           />
         </div>

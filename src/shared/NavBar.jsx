@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
+  //console.log(user);
 
   const navigate = useNavigate();
   const handleSignOut = () => {
@@ -22,9 +22,11 @@ const NavBar = () => {
       <li>
         <NavLink to="/userProfile">User Profile</NavLink>
       </li>
-      <li>
-        <NavLink to="/login">login</NavLink>
-      </li>
+      {!user && (
+        <li>
+          <NavLink to="/login">login</NavLink>
+        </li>
+      )}
     </>
   );
   return (
@@ -54,7 +56,9 @@ const NavBar = () => {
             {link}
           </ul>
         </div>
-        <h1 className="btn btn-ghost text-3xl uppercase m-0">Priyo-nibash</h1>
+        <h1 className="btn btn-ghost text-sm md:text-3xl uppercase m-0">
+          Priyo-nibash
+        </h1>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{link}</ul>

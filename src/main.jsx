@@ -11,6 +11,7 @@ import Login from "./login/Login.jsx";
 import UpdateProfile from "./Pages/UpdateProfile/UpdateProfile.jsx";
 import UserProfile from "./Pages/userProfile/UserProfile.jsx";
 import PrivateRoute from "./privateRoute/PrivateRoute.jsx";
+import EstateDetails from "./estateDetails/EstateDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
       {
         path: "/signUp",
         element: <Registration />,
+      },
+      {
+        path: "/estate/:id",
+        element: <EstateDetails></EstateDetails>,
+        loader: () => fetch("/Estate.json"),
       },
     ],
   },

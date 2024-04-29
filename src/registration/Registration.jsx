@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../shared/NavBar";
 import { updateProfile } from "firebase/auth";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Registration = () => {
   const { createUser } = useContext(AuthContext);
@@ -103,7 +104,7 @@ const Registration = () => {
                   required
                 />
               </div>
-              <div className="form-control">
+              <div className="form-control relative">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
@@ -114,6 +115,7 @@ const Registration = () => {
                   className="input input-bordered"
                   required
                 />
+
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?

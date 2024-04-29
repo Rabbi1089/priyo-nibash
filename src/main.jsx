@@ -12,11 +12,13 @@ import UpdateProfile from "./Pages/UpdateProfile/UpdateProfile.jsx";
 import UserProfile from "./Pages/userProfile/UserProfile.jsx";
 import PrivateRoute from "./privateRoute/PrivateRoute.jsx";
 import EstateDetails from "./estateDetails/EstateDetails.jsx";
+import ErrorPage from "./ErrorPage/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         index: true,

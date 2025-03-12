@@ -5,8 +5,7 @@ A full-featured real estate web application designed to support a wide range of 
 
 ## 🌐 Live Site
 
-Check out the live application here: https://priyo-nibash.web.app/#item3
-
+Check out the live application here: https://priyo-nibash.web.app
 ## 📌 Features
 
 - 🔍 **Property Types Supported**
